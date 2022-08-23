@@ -8,6 +8,8 @@ import { MarcadoresComponent } from './pages/marcadores/marcadores.component';
 import { ZoomRangeComponent } from './pages/zoom-range/zoom-range.component';
 import { DispositivosComponent } from './pages/dispositivos/dispositivos.component';
 
+import { PrimeNgModule } from '../prime-ng/prime-ng.module';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { DispositivosComponent } from './pages/dispositivos/dispositivos.compone
   ],
   imports: [
     CommonModule,
-    MapasRoutingModule
+    MapasRoutingModule,
+    PrimeNgModule
   ]
 })
 export class MapasModule { }
