@@ -7,9 +7,9 @@ const routes: Routes = [
     loadChildren: () => import('./mapas/mapas.module').then(m => m.MapasModule)
   },
   {
-    path: '**',
-    redirectTo: 'mapas'
-  }
+    path: 'usuario',
+    loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule)
+  },
 ];
 
 
