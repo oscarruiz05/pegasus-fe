@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
         icon: 'pi pi-fw pi-car',
         routerLink: 'mapas/dispositivos'
       },
-      {
+      /* {
         label: 'Obtener Informacion del Vechiculo',
         icon: 'pi pi-fw pi-info',
       },
@@ -30,7 +30,7 @@ export class MenuComponent implements OnInit {
         label: 'Mapa',
         icon: 'pi pi-fw pi-map',
         routerLink: 'mapas/full-sreen'
-      }
+      } */
     ];
   }
 

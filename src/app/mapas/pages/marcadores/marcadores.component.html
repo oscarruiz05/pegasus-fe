@@ -1,1 +1,28 @@
-<p>marcadores works!</p>
+<div class="w-100 mt-2 flex flex-wrap align-items-center justify-content-center ">
+    <p-table class="w-9" [value]="dispositivo" dataKey="id"  [rows]="10" [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[10,25,50]" [loading]="loading" [paginator]="true" currentPageReportTemplate="mostrando {first} a {last} de {totalRecords} valores"  responsiveLayout="scroll" styleClass="p-datatable-gridlines">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="vid">Dispositivo<p-sortIcon field="vid"></p-sortIcon>
+                </th>
+                <th pSortableColumn="ac">Aceleración Gps<p-sortIcon field="ac"></p-sortIcon></th>
+                <th pSortableColumn="speed">Velocidad<p-sortIcon field="speed"></p-sortIcon></th>
+                <th pSortableColumn="btt_battery">Batería Bluetooth<p-sortIcon field="btt_battery"></p-sortIcon></th>
+                <th pSortableColumn="light_sensor">Sensor de luz<p-sortIcon field="light_sensor"></p-sortIcon></th>
+                <th pSortableColumn="lon">Longitud<p-sortIcon field="lon"></p-sortIcon></th>
+                <th pSortableColumn="lat">Latitud<p-sortIcon field="lat"></p-sortIcon></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-dispositivo>
+            <tr>
+                <td>{{dispositivo.vid}}</td>
+                <td>{{dispositivo.ac}}</td>
+                <td>{{dispositivo.speed}}</td>
+                <td>{{dispositivo.btt_battery}}</td>
+                <td>{{dispositivo.light_sensor}}</td>
+                <td>{{dispositivo.lon}}</td>
+                <td>{{dispositivo.lat}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

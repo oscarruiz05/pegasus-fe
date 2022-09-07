@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapaService } from '../../services/mapa.service';
 
 @Component({
   selector: 'app-dispositivos',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DispositivosComponent implements OnInit {
 
-  constructor() { }
+  vehiculos: [] = []
 
+  constructor(private mapaService: MapaService) { }
+
+  verVehiculos(){
+    this.mapaService.getVehiculos().subscribe( resp => {
+      this.vehiculos = JSON.parse(JSON.stringify(resp.data)) 
+    })
+
+  }
   ngOnInit(): void {
+    this.verVehiculos()
   }
 
 }
